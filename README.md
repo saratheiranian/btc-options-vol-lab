@@ -9,9 +9,9 @@ Three parts:
 1. **Pricing engine.** Black-Scholes-Merton and Black-76 prices, all five Greeks, and an implied-volatility solver (Newton-Raphson with a bisection fallback), checked against a textbook example and finite differences.
 2. **Live volatility smile.** Every BTC option on Deribit, priced by this engine. Its implied volatilities are checked against Deribit's published figures, then used to map the smile, skew, and term structure.
 3. **Delta-hedging lab.** What a hedger actually loses when rebalancing is discrete, volatility is misjudged, trading costs money, and prices jump the way real Bitcoin does.
-<img width="1728" height="1117" alt="Screenshot 2026-09-28 at 21 55 34" src="https://github.com/user-attachments/assets/dbdbe47f-b722-4d5b-9fdd-20e308c15ad4" />
 
----
+
+---<img width="2139" height="1262" alt="image" src="https://github.com/user-attachments/assets/2b6c7749-cd4a-4887-ba3f-329a276d1f23" />
 
 
 ## How it works
