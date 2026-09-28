@@ -14,15 +14,6 @@ Three parts:
 
 ## Results
 
-> **Pending: run `python -m volab.snapshot` and `python -m volab.hedge --historical`** (see [Quick start](#quick-start)), then copy the headline numbers here from `results/SNAPSHOT.md` and `results/HEDGING.md`.
-
-| | |
-|---|---|
-| Options priced (snapshot date) | *[N] options across [M] expiries, [date]* |
-| Engine vs Deribit's mark IV | *median gap [x.xxx] vol points; [xx]% within 0.5* |
-| 30-day ATM implied vol / skew | *[xx]% / [+x.x] vol points* |
-| Hedging error, daily vs hourly rebalancing | *[x.xx]× (theory √24 ≈ 4.90×)* |
-| Real BTC paths vs model, hourly hedging (std. dev.) | *[$x] vs [$y]* |
 
 ---
 
