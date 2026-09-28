@@ -12,10 +12,6 @@ Three parts:
 
 ---
 
-## Results
-
-
----
 
 ## How it works
 ## Results
