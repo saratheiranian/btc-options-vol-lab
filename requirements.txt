@@ -1,0 +1,8 @@
+numpy>=1.26
+scipy>=1.11
+pandas>=2.1
+pyarrow>=14
+matplotlib>=3.8
+requests>=2.31
+streamlit>=1.37
+altair>=5
