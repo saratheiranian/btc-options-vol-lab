@@ -18,6 +18,23 @@ Three parts:
 ---
 
 ## How it works
+## Results
+
+Live snapshot of Deribit's BTC options market, 28 September 2026, 21:03 UTC.
+
+| | |
+|---|---|
+| Options priced | 888 options across 11 expiries |
+| Engine vs Deribit's published mark IV | median gap 0.012 vol points; 93.8% within 0.5 |
+| ~30-day ATM implied vol / skew (30 Oct 2026 expiry) | 34.9% / +1.1 vol points |
+| Term structure | ATM vol rises from 28.0% (1.5 days) to 39.2% (1 year) |
+| Short-dated skew | +9.7 vol points at 1.5 days, fading to about +0.5 beyond 3 months |
+| Hedging error, daily vs hourly rebalancing | 4.93× (theory √24 ≈ 4.90×) |
+| Hourly hedging on real BTC prices vs the model (std. dev. of P&L) | $836 vs $96, about 8.7× riskier; worst 5%: −$1,633 vs −$159 |
+
+Hedging on real prices is far riskier than Black-Scholes predicts: real Bitcoin jumps, and its volatility changes from month to month, so a single volatility is often the wrong price (experiment 2 below shows how much that costs). Based on about 24 non-overlapping 30-day windows over two years of hourly prices, so treat the size of the gap as indicative. Full reports: [SNAPSHOT.md](results/SNAPSHOT.md), [HEDGING.md](results/HEDGING.md).
+
+---
 
 ### 1. Pricing engine (`volab/bs.py`, `volab/iv.py`)
 Vectorised NumPy implementations of the Black-Scholes-Merton price and Greeks (delta, gamma, vega, theta, rho), plus **Black-76** for options on a forward price, which is how Deribit prices BTC options (each expiry against its own futures price).

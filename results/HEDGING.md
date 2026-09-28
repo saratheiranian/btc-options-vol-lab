@@ -52,11 +52,11 @@ More frequent hedging cuts risk, but every rebalance pays costs: the best freque
 
 24 non-overlapping 30-day windows of real hourly BTC prices, each option sold at
 the period's median realised volatility (42.5%; individual windows ranged from
-28% to 68%), hedged hourly.
+29% to 68%), hedged hourly.
 
 | Paths | Mean P&L (USD) | Std. dev. (USD) | Worst 5% (USD) |
 |---|---|---|---|
-| Real BTC prices | -18 | 835 | -1,630 |
+| Real BTC prices | -10 | 836 | -1,633 |
 | Simulated (GBM), same volatility | -1 | 96 | -159 |
 
 Real prices jump and their volatility changes over time, which Black-Scholes assumes away. The gap between
